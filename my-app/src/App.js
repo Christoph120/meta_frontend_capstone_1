@@ -2,12 +2,12 @@ import './App.css';
 
 function App() {
   return (
-    <>
-      <Header>
-        <img src= 'assets/Logo.svg'></img>
-        <h1>Homepage</h1>
-      </Header>
-      <nav>
+    <div className="grid-container">
+      <header className="grid-item">
+        <img src='my-app/src/assets' heigth='50px' width='auto' className="grid-item" alt="Logo" />
+        <h1 className="grid-item">Homepage</h1>
+      </header>
+      <nav className="grid-item">
         <ul>
           <li><a href='#'>Home</a></li>
           <li><a href='#'>About</a></li>
@@ -15,9 +15,9 @@ function App() {
           <li><a href='#'>Contact</a></li>
         </ul>
       </nav>
-      <main></main>
-      <footer></footer>
-    </>
+      <main className="grid-item"></main>
+      <footer className="grid-item"></footer>
+    </div>
   );
 }
 
