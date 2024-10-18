@@ -1,26 +1,61 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  margin: 15%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  background-color:#FBDABB;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-/* index.css */
 .grid-container {
+  width: device-width;
+  min-width: 900px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  grid-template-columns: repeat(3, minmax(auto, 33%));
+  grid-gap: 10px;
+  grid-row: auto;
+  /* Typefaces default */
+  font-family: Markazi Text, Karla Regular;
+  font-size: medium;
 }
-
 .grid-item {
-  background-color: #ccc;
+  background-color: #495E57;
+  color: #fff;
+  border-radius: 16px;
+  border-width: 0px;
+  border-style: solid;
   padding: 20px;
+  /* Typefaces default */
+}
+img.grid-item {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  /* Typefaces default */
+}
+header.grid-item {
   text-align: center;
+  grid-column: auto / span 3;
+  /* Typefaces default */
+}
+nav.grid-item {
+  text-align: center;
+  grid-column: auto / span 3;
+  color:#fff;
+  list-style-type: none;
+  text-decoration: none;
+  /* Typefaces default */
+}
+nav.grid-item li {
+  list-style-type: none; /* Remove default list item markers */
+  margin: 50px;
+  justify-content: center;
+  display: inline;
+  /* Typefaces default */
+  font-size: x-large;
+}
+nav.grid-item a {
+  text-decoration: none; /* Remove underline from links */
+  color: #fff
+}
+nav.grid-item a:hover {
+  color: #F4CE14;
 }

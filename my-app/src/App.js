@@ -1,11 +1,11 @@
 import './App.css';
+import logo from './assets/logo.png'; // Tell webpack this JS file uses this image
 
 function App() {
   return (
     <div className="grid-container">
       <header className="grid-item">
-        <img src='my-app/src/assets' heigth='50px' width='auto' className="grid-item" alt="Logo" />
-        <h1 className="grid-item">Homepage</h1>
+        <img src={logo} heigth='50px' width='auto' className="grid-item" alt="Logo" />
       </header>
       <nav className="grid-item">
         <ul>
@@ -15,8 +15,8 @@ function App() {
           <li><a href='#'>Contact</a></li>
         </ul>
       </nav>
-      <main className="grid-item"></main>
-      <footer className="grid-item"></footer>
+      <main className="grid-item">main</main>
+      <footer className="grid-item">footer</footer>
     </div>
   );
 }
