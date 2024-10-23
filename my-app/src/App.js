@@ -4,7 +4,7 @@ import {Routes, Route, Link} from 'react-router-dom'
 import Home from './pages/home'
 import About from './pages/about'
 import Services from './pages/services'
-import Contact from './pages/contact'
+import Bookings from './pages/bookings'
 
 function App() {
   return (
@@ -17,16 +17,17 @@ function App() {
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/services">Services</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
+          <li><Link to="/bookings">Bookings</Link></li>
         </ul>
       </nav>
+      <main className="grid-item">
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/services' element={<Services />} />
-        <Route path='/contact' element={<Contact />} />
+        <Route path='/bookings' element={<Bookings />} />
       </Routes>
-      <main className="grid-item">main</main>
+      </main>
       <footer className="grid-item">footer</footer>
     </div>
   );

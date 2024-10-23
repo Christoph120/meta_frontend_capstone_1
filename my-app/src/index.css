@@ -59,3 +59,18 @@ nav.grid-item a {
 nav.grid-item a:hover {
   color: #F4CE14;
 }
+main.grid-item {
+  grid-column: auto / span 3;
+  text-align: center;
+  /* Typefaces default */
+}
+footer.grid-item {
+  text-align: center;
+  grid-column: auto / span 3;
+  /* Typefaces default */
+}
+.Form {
+  text-align: center;
+  font-size: large;
+
+}
