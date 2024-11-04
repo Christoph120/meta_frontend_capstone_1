@@ -1,4 +1,5 @@
-import {useState} from "react"; 
+import {useState} from "react";
+import {useNavigate} from "react-router-dom";
   
 function BookingForm() { 
     const [DateDay, setDateDay] = useState("");
@@ -6,6 +7,8 @@ function BookingForm() {
     const [Time, setTime] = useState(""); 
     const [NumberOfGuests, setNumberOfGuests] = useState("1"); 
     const [Occasion, setOccasion] = useState("");
+
+    const navigate = useNavigate();
 
 
 const getIsFormValid = () => { 
@@ -26,10 +29,11 @@ const clearForm = () => {
 
 const handleSubmit = (e) => { 
     e.preventDefault(); 
-    alert("Table booked."); 
-    clearForm(); 
+    alert("Table booked successfully."); 
+    clearForm();
+    navigate("/success");
 }; 
- 
+
 return ( 
     <div className="Form"> 
         <form onSubmit={handleSubmit}> 
