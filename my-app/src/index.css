@@ -69,7 +69,24 @@ footer.grid-item {
   grid-column: auto / span 3;
   /* Typefaces default */
 }
-.Form {
+.Form{
   text-align: center;
   font-size: large;
+  display: flex;
+  flex-direction: column;
+}
+button {
+  color: white;
+  font-family: Markazi Text, Karla Regular;
+  font-style: bold;
+  font-size: large;
+  border-radius: 16px;
+  border-width: 2px 2px 2px 2px;
+  border-color: white;
+  background-color:#495E57;
+}
+
+/* Are any effects used? YES  */
+button:hover {
+  color: #F4CE14;
 }

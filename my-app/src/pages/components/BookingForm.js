@@ -6,9 +6,9 @@ function BookingForm() {
     const [DateMonth, setDateMonth] = useState(""); 
     const [Time, setTime] = useState(""); 
     const [NumberOfGuests, setNumberOfGuests] = useState("1"); 
-    const [Occasion, setOccasion] = useState("");
-
-    const navigate = useNavigate();
+    const [Occasion, setOccasion] = useState("none");
+    const [submitted, setSubmitted] = useState(false);
+    // const navigate = useNavigate();
 
 
 const getIsFormValid = () => { 
@@ -27,12 +27,28 @@ const clearForm = () => {
     setNumberOfGuests(""); 
 }; 
 
-const handleSubmit = (e) => { 
-    e.preventDefault(); 
-    alert("Table booked successfully."); 
-    clearForm();
-    navigate("/success");
-}; 
+const handleSubmit = (e) => {
+    e.preventDefault();
+    setSubmitted(true);
+  };
+
+  
+if (submitted) {
+    return (
+    <>
+        <h2>You successfully made a reservation.
+        </h2>
+    <h3>{DateDay}.{DateMonth}.</h3>
+    <h3>{Time}</h3>
+    <h3>Number of Guests: {NumberOfGuests}</h3> 
+    <h3>Special Occasion: {Occasion}</h3>
+    <a href="/bookings"><button>Book another table</button></a>
+    <br></br>
+    <br></br>
+    <a href="/"><button>   Back to Home   </button></a>
+    </>
+    );
+  }
 
 return ( 
     <div className="Form"> 
@@ -46,15 +62,15 @@ return (
             <br></br> 
             <select value={DateDay} onChange={(e) => setDateDay(e.target.value)}>
             <option value="">-</option> 
-            <option value="1">01</option> 
-            <option value="2">02</option>
-            <option value="3">03</option> 
-            <option value="4">04</option> 
-            <option value="5">05</option>
-            <option value="6">06</option> 
-            <option value="7">07</option> 
-            <option value="8">08</option>
-            <option value="9">09</option> 
+            <option value="01">01</option> 
+            <option value="02">02</option>
+            <option value="03">03</option> 
+            <option value="04">04</option> 
+            <option value="05">05</option>
+            <option value="06">06</option> 
+            <option value="07">07</option> 
+            <option value="08">08</option>
+            <option value="09">09</option> 
             <option value="10">10</option>
             <option value="11">11</option>   
             <option value="12">12</option>
@@ -87,15 +103,15 @@ return (
             <br></br> 
             <select value={DateMonth} onChange={(e) => setDateMonth(e.target.value)}>
             <option value="">-</option> 
-            <option value="1">01</option> 
-            <option value="2">02</option>
-            <option value="3">03</option> 
-            <option value="4">04</option> 
-            <option value="5">05</option>
-            <option value="6">06</option> 
-            <option value="7">07</option> 
-            <option value="8">08</option>
-            <option value="9">09</option> 
+            <option value="01">01</option> 
+            <option value="02">02</option>
+            <option value="03">03</option> 
+            <option value="04">04</option> 
+            <option value="05">05</option>
+            <option value="06">06</option> 
+            <option value="07">07</option> 
+            <option value="08">08</option>
+            <option value="09">09</option> 
             <option value="10">10</option>
             <option value="11">11</option>   
             <option value="12">12</option>
@@ -133,7 +149,7 @@ return (
         <br></br> 
         <div className="Field"> 
             <label> 
-                Occasion
+                Special Occasion
             </label>
             <br></br> 
             <select value={Occasion} onChange={(e) => setOccasion(e.target.value)}> 
