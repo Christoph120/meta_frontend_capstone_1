@@ -1,4 +1,4 @@
-import logo from './assets/logo.png';
+import logo from './assets/logo.jpg';
 import {Routes, Route, Link} from 'react-router-dom'
 import Home from './pages/home'
 import Menu from './pages/menu'
@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="grid-container">
       <header className="grid-item">
-        <img src={logo} style={{height: '119px', width: '384px', borderRadius: '16px'}} alt="Logo" />
+        <img src={logo} style={{height: '119px', width: '384px', borderRadius: '16px', justifySelf: 'center'}} alt="Logo" />
       </header>
       <nav className="grid-item">
         <ul>

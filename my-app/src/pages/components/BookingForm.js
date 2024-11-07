@@ -1,5 +1,7 @@
 import {useState} from "react";
+import table from '../../assets/table.jpg';
 import {useNavigate} from "react-router-dom";
+import reserved from '../../assets/reserved.jpg';
   
 function BookingForm() { 
     const [DateDay, setDateDay] = useState("");
@@ -36,8 +38,8 @@ const handleSubmit = (e) => {
 if (submitted) {
     return (
     <>
-        <h2>You successfully made a reservation.
-        </h2>
+    <h2>You successfully made a reservation.</h2>
+    <img src={reserved}  alt="img"/>
     <h3>{DateDay}.{DateMonth}.</h3>
     <h3>{Time}</h3>
     <h3>Number of Guests: {NumberOfGuests}</h3> 
@@ -46,15 +48,20 @@ if (submitted) {
     <br></br>
     <br></br>
     <a href="/"><button>   Back to Home   </button></a>
+    <br></br>
+    <br></br>
     </>
     );
   }
 
-return ( 
-    <div className="Form"> 
-        <form onSubmit={handleSubmit}> 
-        <fieldset> 
+return (
+    <div>
         <h2>Book a table</h2> 
+        <img src={table} alt="table" />
+        <br></br>
+    <div className="Form">
+        <form onSubmit={handleSubmit}>
+        <fieldset> 
         <div className="Field"> 
             <label> 
                 Day
@@ -163,7 +170,8 @@ return (
             Submit 
         </button> 
         </fieldset> 
-        </form> 
+        </form>
+        </div>  
     </div> 
 ); 
 } 

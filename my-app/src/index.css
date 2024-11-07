@@ -62,19 +62,38 @@ nav.grid-item a:hover {
 main.grid-item {
   grid-column: auto / span 3;
   text-align: center;
+  /* display: flex; */
+  /* flex-direction: row; */
   /* Typefaces default */
 }
+
 footer.grid-item {
   text-align: center;
   grid-column: auto / span 3;
   /* Typefaces default */
 }
-.Form{
+form {
   text-align: center;
   font-size: large;
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
+
+img {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  object-fit: 50%;
+  align-self: center;
+  justify-content: center;
+  justify-self: center;
+  border-radius: 16px;
+  /* Typefaces default */
+}
+
 button {
   color: white;
   font-family: Markazi Text, Karla Regular;
@@ -82,11 +101,26 @@ button {
   font-size: large;
   border-radius: 16px;
   border-width: 2px 2px 2px 2px;
-  border-color: white;
-  background-color:#495E57;
+  border-color: #EE9972;
+  background-color: #F4CE14;
 }
 
-/* Are any effects used? YES  */
-button:hover {
-  color: #F4CE14;
+li {
+  /* list-style-type: none; */
+  margin: 20px;
+  justify-content: center;
+  display: inline;
+  font-size: large;
+}
+
+button:disabled {
+  color: white;
+  background-color: #495E57;
+  border-color: black
+}
+
+p {
+  font-size: x-large;
+  text-align: center;
+  /* Typefaces default */
 }
