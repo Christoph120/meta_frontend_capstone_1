@@ -1,8 +1,16 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { fireEvent, render, screen } from "@testing-library/react";
+import App from './App'
+import { BrowserRouter } from "react-router-dom";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+describe("Booking Form", () => {
+  test("User uses Booking Form", () => {
+    render(
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    );
+    fireEvent.click(screen.getByText('Bookings'));
+    const submitButton = screen.getByRole('button');
+    expect(submitButton).toHaveAttribute('disabled'); 
+    });
+  });
