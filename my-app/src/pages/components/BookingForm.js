@@ -1,17 +1,14 @@
 import {useState} from "react";
 import table from '../../assets/table.jpg';
-import {useNavigate} from "react-router-dom";
 import reserved from '../../assets/reserved.jpg';
   
-function BookingForm() { 
+function BookingForm(props) { 
     const [DateDay, setDateDay] = useState("");
     const [DateMonth, setDateMonth] = useState(""); 
     const [Time, setTime] = useState(""); 
     const [NumberOfGuests, setNumberOfGuests] = useState("1"); 
     const [Occasion, setOccasion] = useState("none");
     const [submitted, setSubmitted] = useState(false);
-    // const navigate = useNavigate();
-
 
 const getIsFormValid = () => { 
     return ( 
